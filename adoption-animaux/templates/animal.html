@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ animal.nom }} - Fiche</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+      </div>
+      <h1> {{ animal.nom }} </h1>
+      <nav class="main-nav">
+        <a href="{{ url_for('index') }}">Accueil</a>
+        <a href="{{ url_for('form') }}">Mettre en adoption</a>
+        <form action="{{ url_for('search') }}" method="get" class="recherche-form">
+          <input type="text" name="q" placeholder="Rechercher un animal...">
+          <button type="submit">🔍</button>
+        </form>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <ul class="animal-details">
+      <li><strong>Espèce :</strong> {{ animal.espece }}</li>
+      <li><strong>Race :</strong> {{ animal.race }}</li>
+      <li><strong>Âge :</strong> {{ animal.age }} ans</li>
+      <li><strong>Description :</strong> {{ animal.description }}</li>
+      <li><strong>Localisation :</strong> {{ animal.ville }}, {{ animal.cp }}</li>
+      <li><strong>Adresse :</strong> {{ animal.adresse }}</li>
+    </ul>
+    <div class="actions">
+      <a class="button style-btn" href="mailto:{{ animal.courriel }}">📧 Contacter</a>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; {{ current_year }} Adoption d'animaux. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

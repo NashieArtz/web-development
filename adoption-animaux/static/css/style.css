@@ -1,0 +1,324 @@
+:root {
+    --primary: #438dd1;
+    --secondary: #F0F4F8;
+    --accent: #FF6F61;
+    --text: #2D373A;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    animation: slideIn 0.5s ease-out;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.2);
+    transition: background 0.3s;
+}
+
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.recherche-form {
+    display: flex;
+}
+
+.recherche-form input {
+    padding: 0.4rem;
+    border: none;
+    border-radius: var(--radius) 0 0 var(--radius);
+    width: 180px;
+}
+
+.recherche-form button {
+    background: var(--accent);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.recherche-form button:hover {
+    background: #e65553;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Animals */
+.animal-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.animal-info {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.animal-info:hover {
+    transform: translateY(-5px);
+}
+
+.animal-info h2 {
+    font-size: 1.25rem;
+    color: #002e5d;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    ;
+}
+
+.animal-info p {
+    flex: 1;
+    margin: 0 1rem 1rem;
+    color: var(--text);
+}
+
+.style-btn {
+    display: inline-block;
+    background-color: #002e5d;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.style-btn:hover {
+    background: #e65553;
+}
+
+.button {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    text-align: center;
+    border-radius: var(--radius);
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #277049;
+}
+
+
+/* Détails animaux*/
+.animal-details {
+    background-color: #ffffff;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.animal-details li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #444;
+    list-style-type: none;
+    ;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.actions .btn {
+    background-color: #002e5d;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions .btn:hover {
+    background-color: #01407a;
+}
+
+.actions .delete-btn {
+    background-color: #c0392b;
+}
+
+.actions .delete-btn:hover {
+    background-color: #a93226;
+}
+
+/* Formulaire */
+
+form#adoptionForm {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    max-width: 720px;
+    margin: 2rem auto;
+    border-top: 6px solid #002e5d;
+}
+
+form#adoptionForm label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #002e5d;
+}
+
+form#adoptionForm input,
+form#adoptionForm textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+form#adoptionForm input:focus,
+form#adoptionForm textarea:focus {
+    border-color: #002e5d;
+    outline: none;
+}
+
+form#adoptionForm textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form#adoptionForm fieldset {
+    border: 1px solid #cbd5e0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+form#adoptionForm legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+    color: #002e5d;
+}
+
+form#adoptionForm button[type="submit"] {
+    background-color: #002e5d;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+}
+
+form#adoptionForm button[type="submit"]:hover {
+    background-color: #01407a;
+}
+
+.msg-error {
+    color: #c0392b;
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+    font-size: 0.875rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .animal-list {
+        grid-template-columns: 1fr;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

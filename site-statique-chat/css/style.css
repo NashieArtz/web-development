@@ -1,0 +1,304 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    background-image: url('/img/naturebg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(244, 238, 238, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    content: "";
+    background-blend-mode: overlay;
+    z-index: -1;
+}
+
+
+
+/* Titre */
+.h1-titre {
+    background-color: rgb(14, 86, 14);
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/* Menu */
+.menu {
+    background-color: rgb(169, 220, 169);
+    border: 1px solid black;
+    border-radius: 2%;
+    margin: 10px 25%;
+    padding: 5px;
+    text-align: center;
+}
+
+.nav-box {
+    padding: 10px;
+    display: inline-flex;
+}
+
+/* Style */
+.bold-vert {
+    font-weight: bold;
+    color: rgb(14, 86, 14);
+}
+
+section {
+    margin: 20px;
+}
+
+table {
+    width: 75%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.555);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.paragraph-wrap {
+    text-wrap: wrap;
+    text-align: justify;
+}
+
+.section-gauche-affichage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-affichage {
+    display: block;
+}
+
+.div-affichage-gauche {
+    width: 50%;
+}
+
+.image-droite {
+    width: 40%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+}
+
+#image-terre {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.images-carres {
+    max-width: 60%;
+    height: auto;;
+}
+
+
+/* Images */
+#image-terre {
+    width: 40%;
+    height: 40%;
+
+}
+
+.logo-partenaire {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+/* Tableau */
+.column {
+    float: left;
+    width: 20%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+
+/* Calendrier */
+
+.calendrier {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    border: 1px solid #ccc;
+}
+
+.mois {
+    padding: 20px 15px;
+    background: #035718;
+    text-align: center;
+}
+
+.mois ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mois ul li {
+    display: inline;
+}
+
+.jours-semaine {
+    background-color: rgba(202, 201, 201, 0.523);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.jours-semaine li {
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+}
+
+.jours {
+    padding: 10px 0px;
+    margin: 0px;
+    background-color: #fffdfd;
+}
+
+.jours li {
+    list-style-type: none;
+    display: inline-block;
+    width: 10%;
+    padding: 30px 0px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.evenement {
+    display: block;
+
+}
+
+/* Form */
+
+.formulaire-inscription>label {
+    display: inline-block;
+    margin: 15px 0px 0px;
+    font-weight: bold;
+}
+
+.formulaire-inscription>input[type="checkbox"] {
+    margin: 10px 5px 0px 0px;
+}
+
+.formulaire-field {
+    margin: 5px 0px 0px;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.formulaire-commentaire {
+    padding: 0px 20% 60px 0px;
+}
+
+
+.formulaire-inscription>input[type="submit"] {
+    margin: 20px 0px 0px;
+    width: 20%;
+    padding: 10px;
+    background-color: #bbfab9;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.inscription-titres {
+    display: block;
+    margin: 15px 0px 5px;
+    font-weight: bold;
+}
+
+/* Contact */
+
+
+#contact-formulaire-direct {
+    margin-bottom: 5px;
+}
+
+.contact-form>label {
+    display: inline-block;
+    margin: 15px 0px 0px;
+    font-weight: bold;
+}
+
+.contact-form>input {
+    margin: 5px 0px 0px;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#message {
+    width: 50%;
+    height: 100px;
+    padding: 5px;
+}
+
+
+.column-contact {
+    text-align: center;
+    width: 200px;
+    flex: 1 0 0;
+}
+
+.row-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.column-contact>img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.column-contact p {
+    margin: 5px 0;
+}
+
+.contact-adresse>h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-adresse>p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(14, 86, 14);
+    padding: 10px 0px;
+}
+
+.rights-text {
+    padding-left: 20px;
+}

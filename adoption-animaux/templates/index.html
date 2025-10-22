@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+      </div>
+      <h1> Accueil - Adoption d'animaux </h1>
+      <nav class="main-nav">
+        <a href="{{ url_for('index') }}">Accueil</a>
+        <a href="{{ url_for('form') }}">Mettre en adoption</a>
+        <form action="{{ url_for('search') }}" method="get" class="recherche-form">
+          <input type="text" name="q" placeholder="Rechercher un animal...">
+          <button type="submit">🔍</button>
+        </form>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="animal-list">
+      {% for animal in animaux %}
+      <article class="animal-info">
+        <h2>{{ animal.nom }}</h2>
+        <p>{{ animal.description }}</p>
+        <a class="btn style-btn" href="{{ url_for('animal_detail', animal_id=animal.id) }}">Voir la fiche</a>
+      </article>
+      {% endfor %}
+    </section>
+  </main>
+  <footer>
+    <p>&copy; {{ current_year }} Adoption d'animaux. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

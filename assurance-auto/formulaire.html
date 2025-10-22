@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="scripts/script.js"></script>
+  <title>Formulaire</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="menu-box">
+      <div class="menu-img">
+        <img src="img/logo.png" alt="logo" class="logo-img">
+      </div>
+
+      <div class="sub-menu-box">
+        <div class="phone">438 391 0938</div>
+        <div class="form">
+          <a href="formulaire.html">
+            <img src="img/car.png" alt="form" class="car-img">
+            <span>Trouver ma mutuelle</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="sub-menu-nav">
+        <nav class="nav-box">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="prix.html">Nos Prix</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="banner">
+    <img src="img/bannerform.png" alt="banniere" class="banner-img">
+  </div>
+
+  <section class="page-row-layout">
+    <div class="review">
+      <img src="img/review-one-form.png" alt="@aAmngq" class="review-img">
+      <blockquote>
+        "Aucune mauvaise surprise, contrat clair et simple. Très satisfait !"
+        <span class="review-style">@aAmngq: <span class="stars-color">★★★★★★</span></span>
+      </blockquote>
+      <img src="img/review-two-form.png" alt="@LavIeJar" class="review-img">
+      <blockquote>
+        "Assistance correcte, mais manque de transparence sur les exclusions."
+        <span class="review-style">@LavIeJar: <span class="stars-color">★★★★☆☆</span></span>
+      </blockquote>
+      <img src="img/review-three-form.png" alt="@Umquet" class="review-img">
+      <blockquote>
+        "Bon rapport qualité-prix, mais franchise un peu élevée."
+        <span class="review-style">@Umquet: <span class="stars-color">★★★★★☆</span></span>
+      </blockquote>
+      <img src="img/review-four-form.png" alt="@Moquette.fr" class="review-img">
+      <blockquote>
+        "Mon frère m'a conseillé de prendre cette assurance, depuis, je le recommande à tout le monde."
+        <span class="review-style">@Moquette.fr: <span class="stars-color">★★★★★★</span></span>
+      </blockquote>
+    </div>
+
+    <section class="page-column-layout">
+      <h1 class="page-top-title"> Formulaire </h1>
+
+      <form class="form-box">
+
+        <div>
+          <label for="genre">Quel est votre genre?</label>
+          <select name="genre" id="genre" required>
+            <option value="">-- Sélectionnez --</option>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+            <option value="non-binaire">Non-binaire</option>
+          </select>
+          <p id="erreur-genre"></p>
+        </div>
+
+        <div>
+          <label for="date-naissance">Quelle est votre date de naissance?</label>
+          <input type="date" name="date-naissance" id="date-naissance" required>
+        </div>
+
+        <div>
+          <label for="vehicule-valeur">Quelle est la valeur d'achat de votre véhicule</label>
+          <input type="number" name="vehicule-valeur" id="vehicule-valeur" placeholder="0.00 $" required>
+        </div>
+
+        <div>
+          <label for="vehicule-annee">Quelle est l'année de fabrication de votre véhicule?</label>
+          <input type="date" name="vehicule-annee" id="vehicule-annee" required>
+        </div>
+
+        <div>
+          <label for="vehicule-km">Combien de kilomètres parcourez-vous par année?</label>
+          <input type="number" name="vehicule-km" id="vehicule-km" placeholder="0.00 km" required>
+        </div>
+
+        <div class="radio-group">
+          <span>Est-ce que votre véhicule possède une caméra de recul?</span>
+          <input type="radio" name="vehicule-camera" id="vehicule-camera-oui" value="oui" required>
+          <label for="vehicule-camera-oui">Oui</label>
+          <input type="radio" name="vehicule-camera" id="vehicule-camera-non" value="non" required>
+          <label for="vehicule-camera-non">Non</label>
+        </div>
+
+        <div class="radio-group">
+          <span>Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années?</span>
+          <input type="radio" name="reclamation-assurance" id="reclamations-oui" value="oui" required>
+          <label for="reclamations-oui">Oui</label>
+          <input type="radio" name="reclamation-assurance" id="reclamations-non" value="non" required>
+          <label for="reclamations-non">Non</label>
+        </div>
+
+        <div id="bloc-nombre-reclamations" style="display: none;">
+          <label for="nombre-reclamations">Combien de réclamations avez-vous faites?</label>
+          <input type="number" name="reclamation-nombre" id="nombre-reclamations" placeholder="0">
+        </div>
+
+        <div id="zone-montants" style="display: none;">
+        </div>
+
+        <div class="form-buttons-row">
+          <button type="submit">Envoyer</button>
+          <div style="flex:1;"></div>
+          <button type="button" id="reset-btn">Réinitialiser</button>
+        </div>
+      </form>
+
+      <p id="resultat-assurance"></p>
+    </section>
+  </section>
+
+  <footer>
+    <div class="footer">
+      &copy AssuTop - 2025. <br>
+      Tous droits réservés.
+  </footer>
+</body>
+
+</html>

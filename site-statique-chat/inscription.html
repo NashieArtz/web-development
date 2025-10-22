@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/inscription.ico">
+    <title>Inscription - TerroForme</title>
+
+</head>
+
+<body>
+    <h1 class="h1-titre">Inscription</h1>
+    <!-- Menu de navigation -->
+    <div class="menu">
+        <nav>
+            <a href="index.html" class="nav-box">Accueil </a>
+            <span class="nav-box">|</span>
+            <a href="information.html" class="nav-box">Sur nous</a>
+            <span class="nav-box">|</span>
+            <a href="activites.html" class="nav-box">Nos Activités</a>
+            <span class="nav-box">|</span>
+            <a href="inscription.html" class="nav-box">S'inscrire</a>
+            <span class="nav-box">|</span>
+            <a href="contact.html" class="nav-box">Contactez-nous</a>
+        </nav>
+    </div>
+    
+    <section>
+        <div>
+            <form class="formulaire-inscription">
+                <label for="nom">Nom</label><br>
+                <input class="formulaire-field" type="text" id="nom" name="nom" placeholder="Nom" required><br>
+
+                <label for="prenom">Prénom</label><br>
+                <input class="formulaire-field" type="text" id="prenom" name="prenom" placeholder="Prénom" required><br>
+
+                <label for="email">Email</label><br>
+                <input class="formulaire-field" type="email" id="email" name="email" placeholder="E-mail" required><br>
+
+                <label for="mdp">Mot de Passe</label><br>
+                <input class="formulaire-field" type="password" id="mdp" name="mdp" placeholder="3 à 30 caractères"
+                    required><br>
+
+                <label for="telephone">Téléphone</label><br>
+                <input class="formulaire-field" type="tel" id="telephone" name="telephone" placeholder="+X XXXXXX..."
+                    required><br>
+
+                <p class="inscription-titres">Expérience en Bénévolat?</p>
+                <input type="radio" id="oui" name="benevolat-fait" value="Oui" required> Oui <br>
+                <input type="radio" id="non" name="benevolat-fait" value="Non"> Non <br>
+
+                <p class="inscription-titres">Si oui, dans quel domaine?</p>
+                <input type="checkbox" id="environnement" name="environnement" value="Environnement"> Environnement <br>
+                <input type="checkbox" id="education" name="education" value="Éducation"> Éducation et tutorat <br>
+                <input type="checkbox" id="sante" name="sante" value="Santé">Santé et Bien Être<br>
+                <input type="checkbox" id="protection-animaux" name="protection-animaux"
+                    value="Protection animaux">Protection des animaux<br>
+                <input type="checkbox" id="aide-humanitaire" name="aide-humanitaire" value="Aide humanitaire">Aide
+                humanitaire et développement international<br>
+                <input type="checkbox" id="droits-homme" name="droits-homme" value="Droits de l'Homme">Droits de l'Homme
+                et sustice sociale<br>
+                <input type="checkbox" id="securite-alimentaire" name="securite-alimentaire"
+                    value="Sécurité alimentaire">Sécurité alimentaire<br>
+                <input type="checkbox" id="aide-sdf" name="aide-sdf" value="Aide aux sans-sbri">Aide aux sans-sbri<br>
+                <input type="checkbox" id="aide-agees" name="aide-agees" value="Aide au personnes âgées">Aide au
+                personnes âgées<br>
+                <input type="checkbox" id="soutient-handicap" name="soutient-handicap"
+                    value="Soutien aux personnes en situation d'handicap">Soutien aux personnes en situation
+                d'handicap<br>
+                <input type="checkbox" id="soutient-commu" name="soutient-commu"
+                    value="Développement communautaire">Développement communautaire<br>
+                <input type="checkbox" id="autre" name="autre" value="Autre">Autre...<br>
+
+                <p class="inscription-titres">Si oui, où?</p>
+                <textarea class="formulaire-commentaire" name="benevolat-association"
+                    placeholder="Nom de/des associations"></textarea><br>
+
+                <label for="commentaire">Commentaire:</label><br>
+                <textarea class="formulaire-commentaire" id="commentaire" name="commentaire"
+                    placeholder="Commentaire"></textarea><br>
+
+                <input type="submit" value="S'inscrire">
+
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <p class="rights-text">&copy; 2025 TerFo. Tous droits réservés</p>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire Adoption</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+      </div>
+      <h1> Mettre un animal en adoption </h1>
+      <nav class="main-nav">
+        <a href="{{ url_for('index') }}">Accueil</a>
+        <a href="{{ url_for('form') }}">Mettre en adoption</a>
+        <form action="{{ url_for('search') }}" method="get" class="recherche-form">
+          <input type="text" name="q" placeholder="Rechercher un animal...">
+          <button type="submit">🔍</button>
+        </form>
+      </nav>
+    </div>
+  </header>
+    <main>
+        <form id="adoptionForm" method="post" novalidate>
+            <div class="form-group">
+                <label for="nom">Nom de l'animal</label>
+                <input type="text" id="nom" name="nom" required minlength="3" maxlength="20" pattern="^[^0-9,]+$">
+                <span class="msg-error" id="nomError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="espece">Espèce</label>
+                <input type="text" id="espece" name="espece" required pattern="^[^0-9,]+$">
+                <span class="msg-error" id="especeError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="race">Race</label>
+                <input type="text" id="race" name="race" required pattern="^[^0-9,]+$">
+                <span class="msg-error" id="raceError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Âge (0-30 ans)</label>
+                <input type="number" id="age" name="age" required min="0" max="30">
+                <span class="msg-error" id="ageError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required pattern="^[^,]+$"></textarea>
+                <span class="msg-error" id="descriptionError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="courriel">Adresse courriel</label>
+                <input type="email" id="courriel" name="courriel" placeholder="loremipsum@hotmail.com" required>
+                <span class="msg-error" id="courrielError"></span>
+            </div>
+
+            <fieldset>
+                <legend>Adresse de récupération</legend>
+
+                <div class="form-group">
+                    <label for="adresse">Adresse civique</label>
+                    <input type="text" id="adresse" name="adresse" required pattern="[^,]+">
+                    <span class="msg-error" id="adresseError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="ville">Ville</label>
+                    <input type="text" id="ville" name="ville" required pattern="[^,]+">
+                    <span class="msg-error" id="villeError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="cp">Code postal</label>
+                    <input type="text" id="cp" name="cp" required pattern="[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d" maxlength="7" placeholder="A1A 1A1/A1A1A1">
+                    <span class="msg-error" id="cpError"></span>
+                </div>
+
+            </fieldset>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; {{ current_year }} Adoption d'animaux. Tous droits réservés.</p>
+      </footer>
+</body>
+</html>
